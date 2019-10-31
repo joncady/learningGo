@@ -1,7 +1,5 @@
-cd ./src &&
 export GOOS=linux go install &&
-go build -o ../learningGo &&
-cd ../
+go build -o ./learningGo &&
 docker build -t learninggo:latest . &&
 docker tag learninggo:latest joncady/mycontainers:latest &&
 docker push joncady/mycontainers:latest &&
